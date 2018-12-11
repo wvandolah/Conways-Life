@@ -12,7 +12,7 @@ class Canvas extends Component {
     componentDidMount() {
         // Request initial animation frame
         // requestAnimationFrame((timestamp) => { this.onAnimFrame(timestamp); });
-        this.buildGrid()
+        this.buildGrid();
     }
     componentDidUpdate(){
         this.onAnimFrame();
@@ -30,10 +30,10 @@ class Canvas extends Component {
      */
     buildGrid = () => {
         const ctx = this.refs.canvas.getContext('2d');
-        for(let i = 0; i <= this.props.height; i += 15){
+        for(let i = 0; i <= this.props.height; i += this.props.rowPx){
             ctx.moveTo(i, 0);
             ctx.lineTo(i, this.props.height)
-            for(let j = 0 ; j <= this.props.width; j+= 15){
+            for(let j = 0 ; j <= this.props.width; j+= this.props.colPx){
                 ctx.moveTo(0, j);
                 ctx.lineTo(this.props.height, j)
             }
@@ -43,13 +43,13 @@ class Canvas extends Component {
     }
 
     determinPosition = (e) => {
+        console.log(this.props.rowPx)
         const pos = this.refs.canvas.getBoundingClientRect()
-        const xAxis = Math.floor((e.clientX - pos.x) / 15);
-        const yAxis = Math.floor((e.clientY - pos.y) / 15);
+        const xAxis = Math.floor((e.clientX - pos.x) / this.props.rowPx);
+        const yAxis = Math.floor((e.clientY - pos.y) / this.props.colPx);
         // const ctx = this.refs.canvas.getContext('2d');
         console.log("clientX - posX", (e.clientX - pos.x));
-        console.log("clientX - posX % 15", ((e.clientX - pos.x) % 15));
-        console.log(e.clientX - pos.x - ((e.clientX - pos.x) % 15))
+
         
         // ctx.fillRect(
         //     e.clientX - pos.x - ((e.clientX - pos.x) % 15),
@@ -67,18 +67,16 @@ class Canvas extends Component {
         // }
         const ctx = this.refs.canvas.getContext('2d');
         const board = this.props.board;
-        for(let i = 0; i < board.length; i++){
-            for(let j = 0; j < board.length; j++){
-                
+        for(let i = 0, l = board.length; i < l; i++){
+            for(let j = 0, l = board.length; j < l; j++){
                 if(board[i][j]){
-                    console.log("test")
-                    ctx.fillRect(j * 15, i * 15, 15, 15)
+                    ctx.fillRect(j * this.props.colPx + 1, i * this.props.rowPx + 1, this.props.colPx - 2, this.props.rowPx - 2)
                 }else{
-                    ctx.clearRect(j * 15, i * 15, 15, 15)
+                    ctx.clearRect(j * this.props.colPx + 1, i * this.props.rowPx + 1, this.props.colPx - 2, this.props.rowPx - 2)
                 }
             }
         }
-        this.buildGrid()
+        // this.buildGrid()
     }
 
     /**
