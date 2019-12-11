@@ -6,10 +6,10 @@ import './App.css';
 
 class App extends Component {
   state = {
-    width: 600,
-    height: 600,
-    rowsPx: 15,
-    colsPx: 15,
+    width: 700,
+    height: 700,
+    rowsPx: 10,
+    colsPx: 10,
     board: [],
     running: false,
     generation: 0,
@@ -103,7 +103,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container size={(this.state.width * 2.5) + "px"}>
+        <Container size={(this.state.width * 2.1) + "px"}>
           <h1>Conways's Game of Life</h1>
           <h3>Generation: {this.state.generation}</h3>
           <Canvas 
