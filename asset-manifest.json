@@ -1,13 +1,22 @@
 {
-  "main.css": "/Conways-Life/static/css/main.4cfbc51a.chunk.css",
-  "main.js": "/Conways-Life/static/js/main.2d44340b.chunk.js",
-  "main.js.map": "/Conways-Life/static/js/main.2d44340b.chunk.js.map",
-  "static/js/1.97168140.chunk.js": "/Conways-Life/static/js/1.97168140.chunk.js",
-  "static/js/1.97168140.chunk.js.map": "/Conways-Life/static/js/1.97168140.chunk.js.map",
-  "runtime~main.js": "/Conways-Life/static/js/runtime~main.a7d533ab.js",
-  "runtime~main.js.map": "/Conways-Life/static/js/runtime~main.a7d533ab.js.map",
-  "static/css/main.4cfbc51a.chunk.css.map": "/Conways-Life/static/css/main.4cfbc51a.chunk.css.map",
-  "index.html": "/Conways-Life/index.html",
-  "precache-manifest.ceb209188f3abcec3e3e3bb6347f5847.js": "/Conways-Life/precache-manifest.ceb209188f3abcec3e3e3bb6347f5847.js",
-  "service-worker.js": "/Conways-Life/service-worker.js"
+  "files": {
+    "main.css": "/Conways-Life/static/css/main.2cc30b5f.chunk.css",
+    "main.js": "/Conways-Life/static/js/main.ba32799d.chunk.js",
+    "main.js.map": "/Conways-Life/static/js/main.ba32799d.chunk.js.map",
+    "runtime-main.js": "/Conways-Life/static/js/runtime-main.98838e81.js",
+    "runtime-main.js.map": "/Conways-Life/static/js/runtime-main.98838e81.js.map",
+    "static/js/2.246f9249.chunk.js": "/Conways-Life/static/js/2.246f9249.chunk.js",
+    "static/js/2.246f9249.chunk.js.map": "/Conways-Life/static/js/2.246f9249.chunk.js.map",
+    "index.html": "/Conways-Life/index.html",
+    "precache-manifest.06324d41dfc5c486787290509fc4e36b.js": "/Conways-Life/precache-manifest.06324d41dfc5c486787290509fc4e36b.js",
+    "service-worker.js": "/Conways-Life/service-worker.js",
+    "static/css/main.2cc30b5f.chunk.css.map": "/Conways-Life/static/css/main.2cc30b5f.chunk.css.map",
+    "static/js/2.246f9249.chunk.js.LICENSE": "/Conways-Life/static/js/2.246f9249.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98838e81.js",
+    "static/js/2.246f9249.chunk.js",
+    "static/css/main.2cc30b5f.chunk.css",
+    "static/js/main.ba32799d.chunk.js"
+  ]
 }
